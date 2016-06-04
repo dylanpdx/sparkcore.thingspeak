@@ -4,6 +4,7 @@ ThingSpeakLibrary::ThingSpeak::ThingSpeak(String apiKey)
 {
     key = apiKey;
     timeout= DEFAULT_RESPONSE_WAIT_TIME;
+	status = NULL;
 }
 
 void ThingSpeakLibrary::ThingSpeak::setConnectionTimeout(uint32_t milliseconds) 
@@ -20,6 +21,11 @@ bool ThingSpeakLibrary::ThingSpeak::recordValue(int fieldId, String fieldValue)
     return true;
 }
 
+
+bool ThingSpeakLibrary::ThingSpeak::setStatus(String nstat){
+	status = nstat;
+}
+
 String ThingSpeakLibrary::ThingSpeak::composeQuery()
 {
     String result = String ("/update?key=" + key);
@@ -32,6 +38,11 @@ String ThingSpeakLibrary::ThingSpeak::composeQuery()
             values[ct] = NULL;
         }
     }
+	if (status != NULL){
+		result.concat("&status="+status)
+	}
+	
+	
     return result;
 }
 

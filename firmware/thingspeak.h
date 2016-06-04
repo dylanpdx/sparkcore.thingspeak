@@ -15,6 +15,7 @@ namespace ThingSpeakLibrary
         private:
             TCPClient client;
             String key;
+			String status;
             String values [NUMBER_OF_FIELDS];
             String composeQuery();
             uint32_t timeout;
@@ -23,6 +24,7 @@ namespace ThingSpeakLibrary
             bool recordValue(int fieldId, String fieldValue);
             bool sendValues();
             void setConnectionTimeout(uint32_t milliseconds);
+			void setStatus(String nstat);
 
     };
 }
