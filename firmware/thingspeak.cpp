@@ -39,7 +39,7 @@ String ThingSpeakLibrary::ThingSpeak::composeQuery()
         }
     }
 	if (status != NULL){
-		result.concat("&status="+status)
+		result.concat("&status="+status);
 	}
 	
 	
