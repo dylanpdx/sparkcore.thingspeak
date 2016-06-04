@@ -1,7 +1,7 @@
 {
     "name": "thingspeak",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "author": "Dan Reid <danielallenreid@gmail.com>",
     "license": "The MIT License (MIT)",
-    "description": "Spark library for sending values to thingspeak"
+    "description": "Spark library for sending values to thingspeak with added status support"
 }
