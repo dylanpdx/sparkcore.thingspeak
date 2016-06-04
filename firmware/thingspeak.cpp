@@ -22,7 +22,7 @@ bool ThingSpeakLibrary::ThingSpeak::recordValue(int fieldId, String fieldValue)
 }
 
 
-bool ThingSpeakLibrary::ThingSpeak::setStatus(String nstat){
+void ThingSpeakLibrary::ThingSpeak::setStatus(String nstat){
 	status = nstat;
 }
 
